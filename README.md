@@ -3,7 +3,7 @@
 **Trust label:** `educational-reference`  
 **Catalog:** [wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
 
-3 in 1000 ms stay 3. 4 become one reveal. Nothing is animated.
+3 in 1000 ms stay 3. 4 become one reveal. Nothing is animated. A count per second is not an `atomicpacksx` unbox and not a token-backed NFT.
 
 The earlier README described a live product. This tree does not ship that.
 
