@@ -13,6 +13,6 @@ Slowed when `count * 1000 > 3 * windowMs`. The equal case is not slowed. When it
 | `reveals(4, 1000)` | `{ shown: 1, slowed: true }` |
 | `reveals(3, 999)` | `{ shown: 1, slowed: true }` |
 
-Count must be an integer from 1 to 50. The window must be an integer from 1 to 60000 milliseconds.
+The pack-opening function sets `shown` to `1` when the rate is too high. It does not clamp to 3. The lab that clamps to the maximum is [wax-seizure-safe-animations](https://github.com/pixel-journey/wax-seizure-safe-animations). Do not mix them.
 
 The HTTP examples include an Atomic Packs `unboxassets` row. That request is unsent, and it is not this rate check. A tested unbox memo is a different lab: [wax-atomicassets-v2-action-previews](https://github.com/pixel-journey/wax-atomicassets-v2-action-previews).
