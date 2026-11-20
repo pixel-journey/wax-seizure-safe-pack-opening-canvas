@@ -3,6 +3,8 @@
 > **Rung:** `npm test` passes. Nothing is animated. This is not a WCAG audit and not a pack opening.  
 > **The test is the rule.** [WCAG 2.2 three flashes](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html). Clamp-to-maximum is [wax-seizure-safe-animations](https://github.com/pixel-journey/wax-seizure-safe-animations).
 
+Official context: [docs.wax.io](https://docs.wax.io/).
+
 ## Learning outcomes
 
 | Level | After this file |
@@ -33,7 +35,20 @@ npm test
 
 Product UX choice: a pack that would fire too fast shows a **single** safe pose instead of three rapid cards. The animations lab instead **clamps** to the maximum allowed count.
 
-Unsent Atomic Packs HTTP examples are not this rate check. Unbox memo shapes live elsewhere.
+| Lab | Excess behavior |
+| --- | --- |
+| **This (pack canvas)** | collapse to **shown: 1** |
+| [seizure-safe animations](https://github.com/pixel-journey/wax-seizure-safe-animations) | **clamp** to 3/s |
+
+Unsent Atomic Packs HTTP examples are not this rate check.
+
+### Attack → test
+
+| Attack | Lab behavior |
+| --- | --- |
+| Use clampFlashes for pack UX | would still show 3 rapid |
+| Treat equality as slow | 3 in 1000 is not slowed |
+| Call this WCAG conformance | rate only; not a full audit |
 
 ---
 
@@ -47,9 +62,9 @@ Unsent Atomic Packs HTTP examples are not this rate check. Unbox memo shapes liv
 
 ### Exercises
 
-1. `reveals(4, 1000).shown`? (`1`.)  
-2. Is 3 in 1000 slowed? (No.)  
-3. Same as animations lab? (No.)
+1. `reveals(4, 1000).shown`? (**`1`**.)  
+2. Is 3 in 1000 slowed? (**No**.)  
+3. Same as animations lab? (**No**.)
 
 ---
 
